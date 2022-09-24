@@ -53,7 +53,6 @@ const Profile = ({ data }: IProps) => {
           <p className="capitalize text-gray-400 text-md">{user.userName}</p>
         </div>
       </div>
-
       <div>
         <div className="flex gap-10 mb-10 mt-10 border-b-2 border-gray-200 bg-white w-full">
           <p
@@ -75,7 +74,11 @@ const Profile = ({ data }: IProps) => {
             videosList.map((post: Video, idx: number) => (
               <VideoCard post={post} key={idx} />
             ))
-          ) : <NoResults text={`No ${showUserVideos ? '' : 'liked'} videos yet`} />}
+          ) : (
+            <NoResults
+              text={`No ${showUserVideos ? '' : 'liked'} videos yet`}
+            />
+          )}
         </div>
       </div>
     </div>
