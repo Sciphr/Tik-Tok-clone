@@ -8,6 +8,7 @@ interface IProps {
   videos: Video[];
 }
 
+
 const Home = ({ videos }: IProps) => {
   console.log(videos);
   return (
